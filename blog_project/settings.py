@@ -79,8 +79,12 @@ WSGI_APPLICATION = 'blog_project.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'blogdb',
+        'USER':'root',
+        'PASSWORD':'123456',
+        'HOST':'localhost',
+        'POST':3306,
     }
 }
 
@@ -104,9 +108,18 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 
+#静态文件目录
 STATICFILES_DIRS = (
     os.path.join(BASE_DIR,'static'),
 )
+
+MEDIA_URL = '/uploads/'
+
+#记录上传的绝对路径在哪里
+MEDIA_ROOT = os.path.join(BASE_DIR,'uploads')
+
+#自定义用户models
+AUTH_USER_MODEL = 'blog.User'
 
 #网站的基本信息配置
 SITE_NAME = 'Jimmy的个人博客'

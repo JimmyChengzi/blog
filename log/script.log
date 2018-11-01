@@ -6,3 +6,286 @@
 2018-10-31 05:36:09,646 [Thread-29:140154513651456] [django.request:170] [base:get_response] [WARNING]- Not Found: /js/nav.js
 2018-10-31 05:36:21,867 [Thread-34:140154513651456] [django.request:170] [base:get_response] [WARNING]- Not Found: /js/nav.js
 2018-10-31 05:36:21,917 [Thread-35:140154513651456] [django.request:170] [base:get_response] [WARNING]- Not Found: /js/nav.js
+2018-11-01 06:56:03,281 [Thread-7:139895558031104] [django.request:170] [base:get_response] [WARNING]- Not Found: /favicon.ico
+2018-11-01 07:04:50,228 [Thread-2:139788857300736] [django.request:256] [base:handle_uncaught_exception] [ERROR]- Internal Server Error: /admin/
+Traceback (most recent call last):
+  File "/home/tarena/project/blog_project_env/lib/python3.5/site-packages/django/db/backends/utils.py", line 64, in execute
+    return self.cursor.execute(sql, params)
+  File "/home/tarena/project/blog_project_env/lib/python3.5/site-packages/django/db/backends/mysql/base.py", line 124, in execute
+    return self.cursor.execute(query, args)
+  File "/home/tarena/project/blog_project_env/lib/python3.5/site-packages/pymysql/cursors.py", line 170, in execute
+    result = self._query(query)
+  File "/home/tarena/project/blog_project_env/lib/python3.5/site-packages/pymysql/cursors.py", line 328, in _query
+    conn.query(q)
+  File "/home/tarena/project/blog_project_env/lib/python3.5/site-packages/pymysql/connections.py", line 516, in query
+    self._affected_rows = self._read_query_result(unbuffered=unbuffered)
+  File "/home/tarena/project/blog_project_env/lib/python3.5/site-packages/pymysql/connections.py", line 727, in _read_query_result
+    result.read()
+  File "/home/tarena/project/blog_project_env/lib/python3.5/site-packages/pymysql/connections.py", line 1066, in read
+    first_packet = self.connection._read_packet()
+  File "/home/tarena/project/blog_project_env/lib/python3.5/site-packages/pymysql/connections.py", line 683, in _read_packet
+    packet.check_error()
+  File "/home/tarena/project/blog_project_env/lib/python3.5/site-packages/pymysql/protocol.py", line 220, in check_error
+    err.raise_mysql_exception(self._data)
+  File "/home/tarena/project/blog_project_env/lib/python3.5/site-packages/pymysql/err.py", line 109, in raise_mysql_exception
+    raise errorclass(errno, errval)
+pymysql.err.InternalError: (1054, "Unknown column 'blog_user.password' in 'field list'")
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/tarena/project/blog_project_env/lib/python3.5/site-packages/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/tarena/project/blog_project_env/lib/python3.5/site-packages/django/contrib/admin/sites.py", line 254, in wrapper
+    return self.admin_view(view, cacheable)(*args, **kwargs)
+  File "/home/tarena/project/blog_project_env/lib/python3.5/site-packages/django/utils/decorators.py", line 110, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "/home/tarena/project/blog_project_env/lib/python3.5/site-packages/django/views/decorators/cache.py", line 57, in _wrapped_view_func
+    response = view_func(request, *args, **kwargs)
+  File "/home/tarena/project/blog_project_env/lib/python3.5/site-packages/django/contrib/admin/sites.py", line 222, in inner
+    if not self.has_permission(request):
+  File "/home/tarena/project/blog_project_env/lib/python3.5/site-packages/django/contrib/admin/sites.py", line 162, in has_permission
+    return request.user.is_active and request.user.is_staff
+  File "/home/tarena/project/blog_project_env/lib/python3.5/site-packages/django/utils/functional.py", line 226, in inner
+    self._setup()
+  File "/home/tarena/project/blog_project_env/lib/python3.5/site-packages/django/utils/functional.py", line 359, in _setup
+    self._wrapped = self._setupfunc()
+  File "/home/tarena/project/blog_project_env/lib/python3.5/site-packages/django/contrib/auth/middleware.py", line 22, in <lambda>
+    request.user = SimpleLazyObject(lambda: get_user(request))
+  File "/home/tarena/project/blog_project_env/lib/python3.5/site-packages/django/contrib/auth/middleware.py", line 10, in get_user
+    request._cached_user = auth.get_user(request)
+  File "/home/tarena/project/blog_project_env/lib/python3.5/site-packages/django/contrib/auth/__init__.py", line 174, in get_user
+    user = backend.get_user(user_id)
+  File "/home/tarena/project/blog_project_env/lib/python3.5/site-packages/django/contrib/auth/backends.py", line 93, in get_user
+    return UserModel._default_manager.get(pk=user_id)
+  File "/home/tarena/project/blog_project_env/lib/python3.5/site-packages/django/db/models/manager.py", line 127, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/home/tarena/project/blog_project_env/lib/python3.5/site-packages/django/db/models/query.py", line 328, in get
+    num = len(clone)
+  File "/home/tarena/project/blog_project_env/lib/python3.5/site-packages/django/db/models/query.py", line 144, in __len__
+    self._fetch_all()
+  File "/home/tarena/project/blog_project_env/lib/python3.5/site-packages/django/db/models/query.py", line 965, in _fetch_all
+    self._result_cache = list(self.iterator())
+  File "/home/tarena/project/blog_project_env/lib/python3.5/site-packages/django/db/models/query.py", line 238, in iterator
+    results = compiler.execute_sql()
+  File "/home/tarena/project/blog_project_env/lib/python3.5/site-packages/django/db/models/sql/compiler.py", line 840, in execute_sql
+    cursor.execute(sql, params)
+  File "/home/tarena/project/blog_project_env/lib/python3.5/site-packages/django/db/backends/utils.py", line 79, in execute
+    return super(CursorDebugWrapper, self).execute(sql, params)
+  File "/home/tarena/project/blog_project_env/lib/python3.5/site-packages/django/db/backends/utils.py", line 64, in execute
+    return self.cursor.execute(sql, params)
+  File "/home/tarena/project/blog_project_env/lib/python3.5/site-packages/django/db/utils.py", line 97, in __exit__
+    six.reraise(dj_exc_type, dj_exc_value, traceback)
+  File "/home/tarena/project/blog_project_env/lib/python3.5/site-packages/django/utils/six.py", line 658, in reraise
+    raise value.with_traceback(tb)
+  File "/home/tarena/project/blog_project_env/lib/python3.5/site-packages/django/db/backends/utils.py", line 64, in execute
+    return self.cursor.execute(sql, params)
+  File "/home/tarena/project/blog_project_env/lib/python3.5/site-packages/django/db/backends/mysql/base.py", line 124, in execute
+    return self.cursor.execute(query, args)
+  File "/home/tarena/project/blog_project_env/lib/python3.5/site-packages/pymysql/cursors.py", line 170, in execute
+    result = self._query(query)
+  File "/home/tarena/project/blog_project_env/lib/python3.5/site-packages/pymysql/cursors.py", line 328, in _query
+    conn.query(q)
+  File "/home/tarena/project/blog_project_env/lib/python3.5/site-packages/pymysql/connections.py", line 516, in query
+    self._affected_rows = self._read_query_result(unbuffered=unbuffered)
+  File "/home/tarena/project/blog_project_env/lib/python3.5/site-packages/pymysql/connections.py", line 727, in _read_query_result
+    result.read()
+  File "/home/tarena/project/blog_project_env/lib/python3.5/site-packages/pymysql/connections.py", line 1066, in read
+    first_packet = self.connection._read_packet()
+  File "/home/tarena/project/blog_project_env/lib/python3.5/site-packages/pymysql/connections.py", line 683, in _read_packet
+    packet.check_error()
+  File "/home/tarena/project/blog_project_env/lib/python3.5/site-packages/pymysql/protocol.py", line 220, in check_error
+    err.raise_mysql_exception(self._data)
+  File "/home/tarena/project/blog_project_env/lib/python3.5/site-packages/pymysql/err.py", line 109, in raise_mysql_exception
+    raise errorclass(errno, errval)
+django.db.utils.InternalError: (1054, "Unknown column 'blog_user.password' in 'field list'")
+2018-11-01 07:04:53,018 [Thread-3:139788857300736] [django.request:256] [base:handle_uncaught_exception] [ERROR]- Internal Server Error: /admin/
+Traceback (most recent call last):
+  File "/home/tarena/project/blog_project_env/lib/python3.5/site-packages/django/db/backends/utils.py", line 64, in execute
+    return self.cursor.execute(sql, params)
+  File "/home/tarena/project/blog_project_env/lib/python3.5/site-packages/django/db/backends/mysql/base.py", line 124, in execute
+    return self.cursor.execute(query, args)
+  File "/home/tarena/project/blog_project_env/lib/python3.5/site-packages/pymysql/cursors.py", line 170, in execute
+    result = self._query(query)
+  File "/home/tarena/project/blog_project_env/lib/python3.5/site-packages/pymysql/cursors.py", line 328, in _query
+    conn.query(q)
+  File "/home/tarena/project/blog_project_env/lib/python3.5/site-packages/pymysql/connections.py", line 516, in query
+    self._affected_rows = self._read_query_result(unbuffered=unbuffered)
+  File "/home/tarena/project/blog_project_env/lib/python3.5/site-packages/pymysql/connections.py", line 727, in _read_query_result
+    result.read()
+  File "/home/tarena/project/blog_project_env/lib/python3.5/site-packages/pymysql/connections.py", line 1066, in read
+    first_packet = self.connection._read_packet()
+  File "/home/tarena/project/blog_project_env/lib/python3.5/site-packages/pymysql/connections.py", line 683, in _read_packet
+    packet.check_error()
+  File "/home/tarena/project/blog_project_env/lib/python3.5/site-packages/pymysql/protocol.py", line 220, in check_error
+    err.raise_mysql_exception(self._data)
+  File "/home/tarena/project/blog_project_env/lib/python3.5/site-packages/pymysql/err.py", line 109, in raise_mysql_exception
+    raise errorclass(errno, errval)
+pymysql.err.InternalError: (1054, "Unknown column 'blog_user.password' in 'field list'")
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/tarena/project/blog_project_env/lib/python3.5/site-packages/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/tarena/project/blog_project_env/lib/python3.5/site-packages/django/contrib/admin/sites.py", line 254, in wrapper
+    return self.admin_view(view, cacheable)(*args, **kwargs)
+  File "/home/tarena/project/blog_project_env/lib/python3.5/site-packages/django/utils/decorators.py", line 110, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "/home/tarena/project/blog_project_env/lib/python3.5/site-packages/django/views/decorators/cache.py", line 57, in _wrapped_view_func
+    response = view_func(request, *args, **kwargs)
+  File "/home/tarena/project/blog_project_env/lib/python3.5/site-packages/django/contrib/admin/sites.py", line 222, in inner
+    if not self.has_permission(request):
+  File "/home/tarena/project/blog_project_env/lib/python3.5/site-packages/django/contrib/admin/sites.py", line 162, in has_permission
+    return request.user.is_active and request.user.is_staff
+  File "/home/tarena/project/blog_project_env/lib/python3.5/site-packages/django/utils/functional.py", line 226, in inner
+    self._setup()
+  File "/home/tarena/project/blog_project_env/lib/python3.5/site-packages/django/utils/functional.py", line 359, in _setup
+    self._wrapped = self._setupfunc()
+  File "/home/tarena/project/blog_project_env/lib/python3.5/site-packages/django/contrib/auth/middleware.py", line 22, in <lambda>
+    request.user = SimpleLazyObject(lambda: get_user(request))
+  File "/home/tarena/project/blog_project_env/lib/python3.5/site-packages/django/contrib/auth/middleware.py", line 10, in get_user
+    request._cached_user = auth.get_user(request)
+  File "/home/tarena/project/blog_project_env/lib/python3.5/site-packages/django/contrib/auth/__init__.py", line 174, in get_user
+    user = backend.get_user(user_id)
+  File "/home/tarena/project/blog_project_env/lib/python3.5/site-packages/django/contrib/auth/backends.py", line 93, in get_user
+    return UserModel._default_manager.get(pk=user_id)
+  File "/home/tarena/project/blog_project_env/lib/python3.5/site-packages/django/db/models/manager.py", line 127, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/home/tarena/project/blog_project_env/lib/python3.5/site-packages/django/db/models/query.py", line 328, in get
+    num = len(clone)
+  File "/home/tarena/project/blog_project_env/lib/python3.5/site-packages/django/db/models/query.py", line 144, in __len__
+    self._fetch_all()
+  File "/home/tarena/project/blog_project_env/lib/python3.5/site-packages/django/db/models/query.py", line 965, in _fetch_all
+    self._result_cache = list(self.iterator())
+  File "/home/tarena/project/blog_project_env/lib/python3.5/site-packages/django/db/models/query.py", line 238, in iterator
+    results = compiler.execute_sql()
+  File "/home/tarena/project/blog_project_env/lib/python3.5/site-packages/django/db/models/sql/compiler.py", line 840, in execute_sql
+    cursor.execute(sql, params)
+  File "/home/tarena/project/blog_project_env/lib/python3.5/site-packages/django/db/backends/utils.py", line 79, in execute
+    return super(CursorDebugWrapper, self).execute(sql, params)
+  File "/home/tarena/project/blog_project_env/lib/python3.5/site-packages/django/db/backends/utils.py", line 64, in execute
+    return self.cursor.execute(sql, params)
+  File "/home/tarena/project/blog_project_env/lib/python3.5/site-packages/django/db/utils.py", line 97, in __exit__
+    six.reraise(dj_exc_type, dj_exc_value, traceback)
+  File "/home/tarena/project/blog_project_env/lib/python3.5/site-packages/django/utils/six.py", line 658, in reraise
+    raise value.with_traceback(tb)
+  File "/home/tarena/project/blog_project_env/lib/python3.5/site-packages/django/db/backends/utils.py", line 64, in execute
+    return self.cursor.execute(sql, params)
+  File "/home/tarena/project/blog_project_env/lib/python3.5/site-packages/django/db/backends/mysql/base.py", line 124, in execute
+    return self.cursor.execute(query, args)
+  File "/home/tarena/project/blog_project_env/lib/python3.5/site-packages/pymysql/cursors.py", line 170, in execute
+    result = self._query(query)
+  File "/home/tarena/project/blog_project_env/lib/python3.5/site-packages/pymysql/cursors.py", line 328, in _query
+    conn.query(q)
+  File "/home/tarena/project/blog_project_env/lib/python3.5/site-packages/pymysql/connections.py", line 516, in query
+    self._affected_rows = self._read_query_result(unbuffered=unbuffered)
+  File "/home/tarena/project/blog_project_env/lib/python3.5/site-packages/pymysql/connections.py", line 727, in _read_query_result
+    result.read()
+  File "/home/tarena/project/blog_project_env/lib/python3.5/site-packages/pymysql/connections.py", line 1066, in read
+    first_packet = self.connection._read_packet()
+  File "/home/tarena/project/blog_project_env/lib/python3.5/site-packages/pymysql/connections.py", line 683, in _read_packet
+    packet.check_error()
+  File "/home/tarena/project/blog_project_env/lib/python3.5/site-packages/pymysql/protocol.py", line 220, in check_error
+    err.raise_mysql_exception(self._data)
+  File "/home/tarena/project/blog_project_env/lib/python3.5/site-packages/pymysql/err.py", line 109, in raise_mysql_exception
+    raise errorclass(errno, errval)
+django.db.utils.InternalError: (1054, "Unknown column 'blog_user.password' in 'field list'")
+2018-11-01 07:19:40,129 [Thread-19:140566025205504] [django.request:256] [base:handle_uncaught_exception] [ERROR]- Internal Server Error: /admin/blog/article/add/
+Traceback (most recent call last):
+  File "/home/tarena/project/blog_project_env/lib/python3.5/site-packages/django/db/backends/utils.py", line 64, in execute
+    return self.cursor.execute(sql, params)
+  File "/home/tarena/project/blog_project_env/lib/python3.5/site-packages/django/db/backends/mysql/base.py", line 124, in execute
+    return self.cursor.execute(query, args)
+  File "/home/tarena/project/blog_project_env/lib/python3.5/site-packages/pymysql/cursors.py", line 170, in execute
+    result = self._query(query)
+  File "/home/tarena/project/blog_project_env/lib/python3.5/site-packages/pymysql/cursors.py", line 328, in _query
+    conn.query(q)
+  File "/home/tarena/project/blog_project_env/lib/python3.5/site-packages/pymysql/connections.py", line 516, in query
+    self._affected_rows = self._read_query_result(unbuffered=unbuffered)
+  File "/home/tarena/project/blog_project_env/lib/python3.5/site-packages/pymysql/connections.py", line 727, in _read_query_result
+    result.read()
+  File "/home/tarena/project/blog_project_env/lib/python3.5/site-packages/pymysql/connections.py", line 1066, in read
+    first_packet = self.connection._read_packet()
+  File "/home/tarena/project/blog_project_env/lib/python3.5/site-packages/pymysql/connections.py", line 683, in _read_packet
+    packet.check_error()
+  File "/home/tarena/project/blog_project_env/lib/python3.5/site-packages/pymysql/protocol.py", line 220, in check_error
+    err.raise_mysql_exception(self._data)
+  File "/home/tarena/project/blog_project_env/lib/python3.5/site-packages/pymysql/err.py", line 109, in raise_mysql_exception
+    raise errorclass(errno, errval)
+pymysql.err.IntegrityError: (1048, "Column 'user_id' cannot be null")
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/tarena/project/blog_project_env/lib/python3.5/site-packages/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/tarena/project/blog_project_env/lib/python3.5/site-packages/django/contrib/admin/options.py", line 616, in wrapper
+    return self.admin_site.admin_view(view)(*args, **kwargs)
+  File "/home/tarena/project/blog_project_env/lib/python3.5/site-packages/django/utils/decorators.py", line 110, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "/home/tarena/project/blog_project_env/lib/python3.5/site-packages/django/views/decorators/cache.py", line 57, in _wrapped_view_func
+    response = view_func(request, *args, **kwargs)
+  File "/home/tarena/project/blog_project_env/lib/python3.5/site-packages/django/contrib/admin/sites.py", line 233, in inner
+    return view(request, *args, **kwargs)
+  File "/home/tarena/project/blog_project_env/lib/python3.5/site-packages/django/contrib/admin/options.py", line 1516, in add_view
+    return self.changeform_view(request, None, form_url, extra_context)
+  File "/home/tarena/project/blog_project_env/lib/python3.5/site-packages/django/utils/decorators.py", line 34, in _wrapper
+    return bound_func(*args, **kwargs)
+  File "/home/tarena/project/blog_project_env/lib/python3.5/site-packages/django/utils/decorators.py", line 110, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "/home/tarena/project/blog_project_env/lib/python3.5/site-packages/django/utils/decorators.py", line 30, in bound_func
+    return func.__get__(self, type(self))(*args2, **kwargs2)
+  File "/usr/lib/python3.5/contextlib.py", line 30, in inner
+    return func(*args, **kwds)
+  File "/home/tarena/project/blog_project_env/lib/python3.5/site-packages/django/contrib/admin/options.py", line 1467, in changeform_view
+    self.save_model(request, new_object, form, not add)
+  File "/home/tarena/project/blog_project_env/lib/python3.5/site-packages/django/contrib/admin/options.py", line 1078, in save_model
+    obj.save()
+  File "/home/tarena/project/blog_project_env/lib/python3.5/site-packages/django/db/models/base.py", line 710, in save
+    force_update=force_update, update_fields=update_fields)
+  File "/home/tarena/project/blog_project_env/lib/python3.5/site-packages/django/db/models/base.py", line 738, in save_base
+    updated = self._save_table(raw, cls, force_insert, force_update, using, update_fields)
+  File "/home/tarena/project/blog_project_env/lib/python3.5/site-packages/django/db/models/base.py", line 822, in _save_table
+    result = self._do_insert(cls._base_manager, using, fields, update_pk, raw)
+  File "/home/tarena/project/blog_project_env/lib/python3.5/site-packages/django/db/models/base.py", line 861, in _do_insert
+    using=using, raw=raw)
+  File "/home/tarena/project/blog_project_env/lib/python3.5/site-packages/django/db/models/manager.py", line 127, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/home/tarena/project/blog_project_env/lib/python3.5/site-packages/django/db/models/query.py", line 920, in _insert
+    return query.get_compiler(using=using).execute_sql(return_id)
+  File "/home/tarena/project/blog_project_env/lib/python3.5/site-packages/django/db/models/sql/compiler.py", line 974, in execute_sql
+    cursor.execute(sql, params)
+  File "/home/tarena/project/blog_project_env/lib/python3.5/site-packages/django/db/backends/utils.py", line 79, in execute
+    return super(CursorDebugWrapper, self).execute(sql, params)
+  File "/home/tarena/project/blog_project_env/lib/python3.5/site-packages/django/db/backends/utils.py", line 64, in execute
+    return self.cursor.execute(sql, params)
+  File "/home/tarena/project/blog_project_env/lib/python3.5/site-packages/django/db/utils.py", line 97, in __exit__
+    six.reraise(dj_exc_type, dj_exc_value, traceback)
+  File "/home/tarena/project/blog_project_env/lib/python3.5/site-packages/django/utils/six.py", line 658, in reraise
+    raise value.with_traceback(tb)
+  File "/home/tarena/project/blog_project_env/lib/python3.5/site-packages/django/db/backends/utils.py", line 64, in execute
+    return self.cursor.execute(sql, params)
+  File "/home/tarena/project/blog_project_env/lib/python3.5/site-packages/django/db/backends/mysql/base.py", line 124, in execute
+    return self.cursor.execute(query, args)
+  File "/home/tarena/project/blog_project_env/lib/python3.5/site-packages/pymysql/cursors.py", line 170, in execute
+    result = self._query(query)
+  File "/home/tarena/project/blog_project_env/lib/python3.5/site-packages/pymysql/cursors.py", line 328, in _query
+    conn.query(q)
+  File "/home/tarena/project/blog_project_env/lib/python3.5/site-packages/pymysql/connections.py", line 516, in query
+    self._affected_rows = self._read_query_result(unbuffered=unbuffered)
+  File "/home/tarena/project/blog_project_env/lib/python3.5/site-packages/pymysql/connections.py", line 727, in _read_query_result
+    result.read()
+  File "/home/tarena/project/blog_project_env/lib/python3.5/site-packages/pymysql/connections.py", line 1066, in read
+    first_packet = self.connection._read_packet()
+  File "/home/tarena/project/blog_project_env/lib/python3.5/site-packages/pymysql/connections.py", line 683, in _read_packet
+    packet.check_error()
+  File "/home/tarena/project/blog_project_env/lib/python3.5/site-packages/pymysql/protocol.py", line 220, in check_error
+    err.raise_mysql_exception(self._data)
+  File "/home/tarena/project/blog_project_env/lib/python3.5/site-packages/pymysql/err.py", line 109, in raise_mysql_exception
+    raise errorclass(errno, errval)
+django.db.utils.IntegrityError: (1048, "Column 'user_id' cannot be null")
+2018-11-01 08:17:04,659 [Thread-16:140221853878016] [django.request:170] [base:get_response] [WARNING]- Not Found: /upload/11.png
+2018-11-01 08:18:23,986 [Thread-17:140221853878016] [django.request:170] [base:get_response] [WARNING]- Not Found: /upload/2018/11/11.png
+2018-11-01 08:19:48,167 [Thread-19:140221853878016] [django.request:170] [base:get_response] [WARNING]- Not Found: /upload/avatar/2018/11/11.png
+2018-11-01 08:19:53,701 [Thread-20:140221853878016] [django.request:170] [base:get_response] [WARNING]- Not Found: /uploads/avatar/2018/11/11.png
