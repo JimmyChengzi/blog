@@ -1,0 +1,8 @@
+2018-10-31 05:36:03,556 [Thread-5:140154496866048] [django.request:170] [base:get_response] [WARNING]- Not Found: /js/nav.js
+2018-10-31 05:36:03,712 [Thread-10:140153909671680] [django.request:170] [base:get_response] [WARNING]- Not Found: /js/nav.js
+2018-10-31 05:36:05,098 [Thread-24:140154513651456] [django.request:170] [base:get_response] [WARNING]- Not Found: /favicon.ico
+2018-10-31 05:36:05,123 [Thread-25:140154513651456] [django.request:170] [base:get_response] [WARNING]- Not Found: /favicon.ico
+2018-10-31 05:36:09,600 [Thread-28:140154513651456] [django.request:170] [base:get_response] [WARNING]- Not Found: /js/nav.js
+2018-10-31 05:36:09,646 [Thread-29:140154513651456] [django.request:170] [base:get_response] [WARNING]- Not Found: /js/nav.js
+2018-10-31 05:36:21,867 [Thread-34:140154513651456] [django.request:170] [base:get_response] [WARNING]- Not Found: /js/nav.js
+2018-10-31 05:36:21,917 [Thread-35:140154513651456] [django.request:170] [base:get_response] [WARNING]- Not Found: /js/nav.js
