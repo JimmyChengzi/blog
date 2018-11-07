@@ -289,3 +289,218 @@ django.db.utils.IntegrityError: (1048, "Column 'user_id' cannot be null")
 2018-11-01 08:18:23,986 [Thread-17:140221853878016] [django.request:170] [base:get_response] [WARNING]- Not Found: /upload/2018/11/11.png
 2018-11-01 08:19:48,167 [Thread-19:140221853878016] [django.request:170] [base:get_response] [WARNING]- Not Found: /upload/avatar/2018/11/11.png
 2018-11-01 08:19:53,701 [Thread-20:140221853878016] [django.request:170] [base:get_response] [WARNING]- Not Found: /uploads/avatar/2018/11/11.png
+2018-11-05 06:11:35,814 [Thread-9:140174727599872] [django.request:170] [base:get_response] [WARNING]- Not Found: /favicon.ico
+2018-11-05 06:30:51,568 [Thread-5:139738438694656] [django.request:170] [base:get_response] [WARNING]- Not Found: /js/nav.js
+2018-11-05 06:30:51,796 [Thread-8:139738438694656] [django.request:170] [base:get_response] [WARNING]- Not Found: /js/nav.js
+2018-11-05 06:32:02,258 [Thread-2:140377335551744] [django.request:256] [base:handle_uncaught_exception] [ERROR]- Internal Server Error: /
+Traceback (most recent call last):
+  File "/home/tarena/project/blog_project_env/lib/python3.5/site-packages/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/tarena/project/blog_project_env/blog_project/blog/views.py", line 20, in index
+    return render(request, 'index.html', locals())
+  File "/home/tarena/project/blog_project_env/lib/python3.5/site-packages/django/shortcuts.py", line 67, in render
+    template_name, context, request=request, using=using)
+  File "/home/tarena/project/blog_project_env/lib/python3.5/site-packages/django/template/loader.py", line 99, in render_to_string
+    return template.render(context, request)
+  File "/home/tarena/project/blog_project_env/lib/python3.5/site-packages/django/template/backends/django.py", line 74, in render
+    return self.template.render(context)
+  File "/home/tarena/project/blog_project_env/lib/python3.5/site-packages/django/template/base.py", line 209, in render
+    return self._render(context)
+  File "/home/tarena/project/blog_project_env/lib/python3.5/site-packages/django/template/base.py", line 201, in _render
+    return self.nodelist.render(context)
+  File "/home/tarena/project/blog_project_env/lib/python3.5/site-packages/django/template/base.py", line 903, in render
+    bit = self.render_node(node, context)
+  File "/home/tarena/project/blog_project_env/lib/python3.5/site-packages/django/template/debug.py", line 79, in render_node
+    return node.render(context)
+  File "/home/tarena/project/blog_project_env/lib/python3.5/site-packages/django/template/loader_tags.py", line 113, in render
+    compiled_parent = self.get_parent(context)
+  File "/home/tarena/project/blog_project_env/lib/python3.5/site-packages/django/template/loader_tags.py", line 103, in get_parent
+    raise TemplateSyntaxError(error_msg)
+django.template.base.TemplateSyntaxError: Invalid template name in 'extends' tag: ''. Got this from the 'base.html' variable.
+2018-11-05 06:33:11,851 [Thread-6:140377335551744] [django.request:170] [base:get_response] [WARNING]- Not Found: /js/nav.js
+2018-11-05 06:33:12,235 [Thread-13:140377335551744] [django.request:170] [base:get_response] [WARNING]- Not Found: /js/nav.js
+2018-11-05 06:37:21,952 [Thread-29:140377105360640] [django.request:170] [base:get_response] [WARNING]- Not Found: /js/nav.js
+2018-11-05 06:37:22,005 [Thread-31:140377088575232] [django.request:170] [base:get_response] [WARNING]- Not Found: /js/nav.js
+2018-11-05 06:43:22,977 [Thread-8:140284457740032] [django.request:170] [base:get_response] [WARNING]- Not Found: /js/nav.js
+2018-11-05 06:43:23,028 [Thread-9:140284457740032] [django.request:170] [base:get_response] [WARNING]- Not Found: /js/nav.js
+2018-11-05 06:44:52,127 [Thread-32:140284449347328] [django.request:170] [base:get_response] [WARNING]- Not Found: /js/nav.js
+2018-11-05 06:44:52,190 [Thread-34:140284449347328] [django.request:170] [base:get_response] [WARNING]- Not Found: /js/nav.js
+2018-11-05 06:44:53,360 [Thread-57:140284449347328] [django.request:170] [base:get_response] [WARNING]- Not Found: /js/nav.js
+2018-11-05 06:44:53,400 [Thread-58:140284449347328] [django.request:170] [base:get_response] [WARNING]- Not Found: /js/nav.js
+2018-11-05 06:45:51,201 [Thread-83:140284449347328] [django.request:170] [base:get_response] [WARNING]- Not Found: /js/nav.js
+2018-11-05 06:45:51,240 [Thread-84:140284449347328] [django.request:170] [base:get_response] [WARNING]- Not Found: /js/nav.js
+2018-11-05 06:47:14,766 [Thread-126:140284457740032] [django.request:170] [base:get_response] [WARNING]- Not Found: /js/nav.js
+2018-11-05 06:47:14,897 [Thread-129:140284457740032] [django.request:170] [base:get_response] [WARNING]- Not Found: /js/nav.js
+2018-11-05 07:18:09,779 [Thread-3:139765427042048] [django.request:170] [base:get_response] [WARNING]- Not Found: /js/nav.js
+2018-11-05 07:18:10,738 [Thread-8:139765427042048] [django.request:170] [base:get_response] [WARNING]- Not Found: /js/nav.js
+2018-11-05 07:21:50,284 [Thread-7:140702838511360] [django.request:170] [base:get_response] [WARNING]- Not Found: /js/nav.js
+2018-11-05 07:21:50,348 [Thread-9:140702827407104] [django.request:170] [base:get_response] [WARNING]- Not Found: /js/nav.js
+2018-11-05 07:26:05,527 [Thread-3:140577542272768] [django.request:170] [base:get_response] [WARNING]- Not Found: /js/nav.js
+2018-11-05 07:26:05,534 [Thread-4:140577531168512] [django.request:170] [base:get_response] [WARNING]- Not Found: /手提
+2018-11-05 07:26:05,542 [Thread-6:140577522775808] [django.request:170] [base:get_response] [WARNING]- Not Found: /手机
+2018-11-05 07:26:05,547 [Thread-5:140577542272768] [django.request:170] [base:get_response] [WARNING]- Not Found: /键盘
+2018-11-05 07:26:05,549 [Thread-7:140577531168512] [django.request:170] [base:get_response] [WARNING]- Not Found: /耳机
+2018-11-05 07:26:05,594 [Thread-8:140577531168512] [django.request:170] [base:get_response] [WARNING]- Not Found: /js/nav.js
+2018-11-05 07:26:05,604 [Thread-9:140577531168512] [django.request:170] [base:get_response] [WARNING]- Not Found: /耳机
+2018-11-05 07:26:05,614 [Thread-10:140577531168512] [django.request:170] [base:get_response] [WARNING]- Not Found: /手机
+2018-11-05 07:26:05,616 [Thread-11:140577542272768] [django.request:170] [base:get_response] [WARNING]- Not Found: /键盘
+2018-11-05 07:26:05,626 [Thread-12:140577531168512] [django.request:170] [base:get_response] [WARNING]- Not Found: /手提
+2018-11-05 07:26:56,029 [Thread-20:140577531168512] [django.request:170] [base:get_response] [WARNING]- Not Found: /js/nav.js
+2018-11-05 07:26:56,084 [Thread-21:140577531168512] [django.request:170] [base:get_response] [WARNING]- Not Found: /js/nav.js
+2018-11-05 07:28:05,192 [Thread-36:140577522775808] [django.request:170] [base:get_response] [WARNING]- Not Found: /js/nav.js
+2018-11-05 07:28:05,210 [Thread-37:140577542272768] [django.request:170] [base:get_response] [WARNING]- Not Found: /手提
+2018-11-05 07:28:05,219 [Thread-38:140577522775808] [django.request:170] [base:get_response] [WARNING]- Not Found: /键盘
+2018-11-05 07:28:05,238 [Thread-39:140577514383104] [django.request:170] [base:get_response] [WARNING]- Not Found: /手机
+2018-11-05 07:28:05,243 [Thread-40:140577542272768] [django.request:170] [base:get_response] [WARNING]- Not Found: /耳机
+2018-11-05 07:28:05,257 [Thread-41:140577531168512] [django.request:170] [base:get_response] [WARNING]- Not Found: /js/nav.js
+2018-11-05 07:28:05,282 [Thread-42:140577531168512] [django.request:170] [base:get_response] [WARNING]- Not Found: /耳机
+2018-11-05 07:28:05,287 [Thread-43:140577514383104] [django.request:170] [base:get_response] [WARNING]- Not Found: /手提
+2018-11-05 07:28:05,294 [Thread-44:140577522775808] [django.request:170] [base:get_response] [WARNING]- Not Found: /键盘
+2018-11-05 07:28:05,301 [Thread-45:140577514383104] [django.request:170] [base:get_response] [WARNING]- Not Found: /手机
+2018-11-05 07:29:49,600 [Thread-52:140577514383104] [django.request:170] [base:get_response] [WARNING]- Not Found: /js/nav.js
+2018-11-05 07:29:49,642 [Thread-53:140577514383104] [django.request:170] [base:get_response] [WARNING]- Not Found: /js/nav.js
+2018-11-05 07:29:52,175 [Thread-68:140577514383104] [django.request:170] [base:get_response] [WARNING]- Not Found: /js/nav.js
+2018-11-05 07:29:52,255 [Thread-72:140577542272768] [django.request:170] [base:get_response] [WARNING]- Not Found: /js/nav.js
+2018-11-05 07:30:31,363 [Thread-74:140577522775808] [django.request:170] [base:get_response] [WARNING]- Not Found: /js/nav.js
+2018-11-05 07:30:31,367 [Thread-75:140577531168512] [django.request:170] [base:get_response] [WARNING]- Not Found: /耳机
+2018-11-05 07:30:31,376 [Thread-76:140577522775808] [django.request:170] [base:get_response] [WARNING]- Not Found: /手提
+2018-11-05 07:30:31,378 [Thread-77:140577531168512] [django.request:170] [base:get_response] [WARNING]- Not Found: /键盘
+2018-11-05 07:30:31,381 [Thread-78:140577514383104] [django.request:170] [base:get_response] [WARNING]- Not Found: /手机
+2018-11-05 07:30:31,430 [Thread-79:140577514383104] [django.request:170] [base:get_response] [WARNING]- Not Found: /耳机
+2018-11-05 07:30:31,436 [Thread-80:140577514383104] [django.request:170] [base:get_response] [WARNING]- Not Found: /手机
+2018-11-05 07:30:31,446 [Thread-81:140577531168512] [django.request:170] [base:get_response] [WARNING]- Not Found: /键盘
+2018-11-05 07:30:31,451 [Thread-82:140577514383104] [django.request:170] [base:get_response] [WARNING]- Not Found: /手提
+2018-11-05 07:31:20,757 [Thread-91:140577542272768] [django.request:170] [base:get_response] [WARNING]- Not Found: /ad/2018/11/a1.jpg
+2018-11-05 07:31:20,759 [Thread-90:140577522775808] [django.request:170] [base:get_response] [WARNING]- Not Found: /js/nav.js
+2018-11-05 07:31:20,811 [Thread-93:140577522775808] [django.request:170] [base:get_response] [WARNING]- Not Found: /ad/2018/11/a3.jpg
+2018-11-05 07:31:20,840 [Thread-92:140577542272768] [django.request:170] [base:get_response] [WARNING]- Not Found: /ad/2018/11/a2.jpg
+2018-11-05 07:31:20,846 [Thread-94:140577522775808] [django.request:170] [base:get_response] [WARNING]- Not Found: /ad/2018/11/a4.jpg
+2018-11-05 07:31:21,050 [Thread-95:140577522775808] [django.request:170] [base:get_response] [WARNING]- Not Found: /js/nav.js
+2018-11-05 07:31:21,087 [Thread-96:140577522775808] [django.request:170] [base:get_response] [WARNING]- Not Found: /ad/2018/11/a1.jpg
+2018-11-05 07:31:21,104 [Thread-97:140577522775808] [django.request:170] [base:get_response] [WARNING]- Not Found: /ad/2018/11/a3.jpg
+2018-11-05 07:31:21,109 [Thread-98:140577542272768] [django.request:170] [base:get_response] [WARNING]- Not Found: /ad/2018/11/a2.jpg
+2018-11-05 07:31:21,118 [Thread-99:140577514383104] [django.request:170] [base:get_response] [WARNING]- Not Found: /ad/2018/11/a4.jpg
+2018-11-05 07:35:20,802 [Thread-120:140577542272768] [django.request:256] [base:handle_uncaught_exception] [ERROR]- Internal Server Error: /
+Traceback (most recent call last):
+  File "/home/tarena/project/blog_project_env/lib/python3.5/site-packages/django/template/base.py", line 337, in parse
+    compile_func = self.tags[command]
+KeyError: 'uploads'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/tarena/project/blog_project_env/lib/python3.5/site-packages/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/tarena/project/blog_project_env/blog_project/blog/views.py", line 26, in index
+    return render(request, 'index.html', locals())
+  File "/home/tarena/project/blog_project_env/lib/python3.5/site-packages/django/shortcuts.py", line 67, in render
+    template_name, context, request=request, using=using)
+  File "/home/tarena/project/blog_project_env/lib/python3.5/site-packages/django/template/loader.py", line 99, in render_to_string
+    return template.render(context, request)
+  File "/home/tarena/project/blog_project_env/lib/python3.5/site-packages/django/template/backends/django.py", line 74, in render
+    return self.template.render(context)
+  File "/home/tarena/project/blog_project_env/lib/python3.5/site-packages/django/template/base.py", line 209, in render
+    return self._render(context)
+  File "/home/tarena/project/blog_project_env/lib/python3.5/site-packages/django/template/base.py", line 201, in _render
+    return self.nodelist.render(context)
+  File "/home/tarena/project/blog_project_env/lib/python3.5/site-packages/django/template/base.py", line 903, in render
+    bit = self.render_node(node, context)
+  File "/home/tarena/project/blog_project_env/lib/python3.5/site-packages/django/template/debug.py", line 79, in render_node
+    return node.render(context)
+  File "/home/tarena/project/blog_project_env/lib/python3.5/site-packages/django/template/loader_tags.py", line 135, in render
+    return compiled_parent._render(context)
+  File "/home/tarena/project/blog_project_env/lib/python3.5/site-packages/django/template/base.py", line 201, in _render
+    return self.nodelist.render(context)
+  File "/home/tarena/project/blog_project_env/lib/python3.5/site-packages/django/template/base.py", line 903, in render
+    bit = self.render_node(node, context)
+  File "/home/tarena/project/blog_project_env/lib/python3.5/site-packages/django/template/debug.py", line 79, in render_node
+    return node.render(context)
+  File "/home/tarena/project/blog_project_env/lib/python3.5/site-packages/django/template/loader_tags.py", line 65, in render
+    result = block.nodelist.render(context)
+  File "/home/tarena/project/blog_project_env/lib/python3.5/site-packages/django/template/base.py", line 903, in render
+    bit = self.render_node(node, context)
+  File "/home/tarena/project/blog_project_env/lib/python3.5/site-packages/django/template/debug.py", line 79, in render_node
+    return node.render(context)
+  File "/home/tarena/project/blog_project_env/lib/python3.5/site-packages/django/template/loader_tags.py", line 151, in render
+    template = context.template.engine.get_template(template)
+  File "/home/tarena/project/blog_project_env/lib/python3.5/site-packages/django/template/engine.py", line 167, in get_template
+    template, origin = self.find_template(template_name, dirs)
+  File "/home/tarena/project/blog_project_env/lib/python3.5/site-packages/django/template/engine.py", line 141, in find_template
+    source, display_name = loader(name, dirs)
+  File "/home/tarena/project/blog_project_env/lib/python3.5/site-packages/django/template/loaders/base.py", line 13, in __call__
+    return self.load_template(template_name, template_dirs)
+  File "/home/tarena/project/blog_project_env/lib/python3.5/site-packages/django/template/loaders/base.py", line 23, in load_template
+    template = Template(source, origin, template_name, self.engine)
+  File "/home/tarena/project/blog_project_env/lib/python3.5/site-packages/django/template/base.py", line 190, in __init__
+    self.nodelist = engine.compile_string(template_string, origin)
+  File "/home/tarena/project/blog_project_env/lib/python3.5/site-packages/django/template/engine.py", line 261, in compile_string
+    return parser.parse()
+  File "/home/tarena/project/blog_project_env/lib/python3.5/site-packages/django/template/base.py", line 341, in parse
+    compiled_result = compile_func(self, token)
+  File "/home/tarena/project/blog_project_env/lib/python3.5/site-packages/django/template/defaulttags.py", line 872, in do_for
+    nodelist_loop = parser.parse(('empty', 'endfor',))
+  File "/home/tarena/project/blog_project_env/lib/python3.5/site-packages/django/template/base.py", line 339, in parse
+    self.invalid_block_tag(token, command, parse_until)
+  File "/home/tarena/project/blog_project_env/lib/python3.5/site-packages/django/template/base.py", line 394, in invalid_block_tag
+    (command, get_text_list(["'%s'" % p for p in parse_until])))
+django.template.base.TemplateSyntaxError: Invalid block tag: 'uploads', expected 'empty' or 'endfor'
+2018-11-05 07:36:11,260 [Thread-125:140577542272768] [django.request:170] [base:get_response] [WARNING]- Not Found: /js/nav.js
+2018-11-05 07:36:11,495 [Thread-127:140577522775808] [django.request:170] [base:get_response] [WARNING]- Not Found: /js/nav.js
+2018-11-05 08:28:58,123 [Thread-150:140577514383104] [django.request:170] [base:get_response] [WARNING]- Not Found: /js/nav.js
+2018-11-05 08:28:58,130 [Thread-151:140577522775808] [django.request:170] [base:get_response] [WARNING]- Not Found: /upload/
+2018-11-05 08:28:58,185 [Thread-152:140577522775808] [django.request:170] [base:get_response] [WARNING]- Not Found: /js/nav.js
+2018-11-05 08:28:58,198 [Thread-153:140577522775808] [django.request:170] [base:get_response] [WARNING]- Not Found: /upload/
+2018-11-05 08:30:02,954 [Thread-172:140577514383104] [django.request:170] [base:get_response] [WARNING]- Not Found: /js/nav.js
+2018-11-05 08:30:03,064 [Thread-177:140577522775808] [django.request:170] [base:get_response] [WARNING]- Not Found: /js/nav.js
+2018-11-05 08:32:26,640 [Thread-197:140577522775808] [django.request:170] [base:get_response] [WARNING]- Not Found: /js/nav.js
+2018-11-05 08:32:26,713 [Thread-198:140577522775808] [django.request:170] [base:get_response] [WARNING]- Not Found: /js/nav.js
+2018-11-05 08:32:45,943 [Thread-217:140577522775808] [django.request:170] [base:get_response] [WARNING]- Not Found: /js/nav.js
+2018-11-05 08:32:47,247 [Thread-219:140577522775808] [django.request:170] [base:get_response] [WARNING]- Not Found: /js/nav.js
+2018-11-05 08:32:47,358 [Thread-220:140577522775808] [django.request:170] [base:get_response] [WARNING]- Not Found: /js/nav.js
+2018-11-05 08:33:44,932 [Thread-223:140577522775808] [django.request:170] [base:get_response] [WARNING]- Not Found: /js/nav.js
+2018-11-05 08:33:44,975 [Thread-224:140577522775808] [django.request:170] [base:get_response] [WARNING]- Not Found: /js/nav.js
+2018-11-05 08:34:10,482 [Thread-231:140577522775808] [django.request:170] [base:get_response] [WARNING]- Not Found: /js/nav.js
+2018-11-05 08:34:10,534 [Thread-232:140577522775808] [django.request:170] [base:get_response] [WARNING]- Not Found: /js/nav.js
+2018-11-05 08:35:23,901 [Thread-254:140577531168512] [django.request:170] [base:get_response] [WARNING]- Not Found: /js/nav.js
+2018-11-05 08:35:23,957 [Thread-255:140577531168512] [django.request:170] [base:get_response] [WARNING]- Not Found: /js/nav.js
+2018-11-05 08:35:53,860 [Thread-279:140577542272768] [django.request:170] [base:get_response] [WARNING]- Not Found: /js/nav.js
+2018-11-05 08:35:53,914 [Thread-280:140577542272768] [django.request:170] [base:get_response] [WARNING]- Not Found: /js/nav.js
+2018-11-05 08:37:22,582 [Thread-299:140577522775808] [django.request:170] [base:get_response] [WARNING]- Not Found: /js/nav.js
+2018-11-05 08:37:22,635 [Thread-304:140577531168512] [django.request:170] [base:get_response] [WARNING]- Not Found: /js/nav.js
+2018-11-05 09:06:27,905 [Thread-10:140031066617600] [django.request:170] [base:get_response] [WARNING]- Not Found: /js/nav.js
+2018-11-05 09:06:28,539 [Thread-11:140031066617600] [django.request:170] [base:get_response] [WARNING]- Not Found: /js/nav.js
+2018-11-05 09:09:58,790 [Thread-63:140031058224896] [django.request:170] [base:get_response] [WARNING]- Not Found: /js/nav.js
+2018-11-05 09:13:43,460 [Thread-88:140031100450560] [django.request:170] [base:get_response] [WARNING]- Not Found: /js/nav.js
+2018-11-05 09:13:44,823 [Thread-89:140031100450560] [django.request:170] [base:get_response] [WARNING]- Not Found: /js/nav.js
+2018-11-05 09:18:15,908 [Thread-114:140031066617600] [django.request:170] [base:get_response] [WARNING]- Not Found: /js/nav.js
+2018-11-05 09:23:05,229 [Thread-139:140031066617600] [django.request:170] [base:get_response] [WARNING]- Not Found: /js/nav.js
+2018-11-05 09:23:05,312 [Thread-140:140031066617600] [django.request:170] [base:get_response] [WARNING]- Not Found: /js/nav.js
+2018-11-05 09:23:58,763 [Thread-162:140031100450560] [django.request:170] [base:get_response] [WARNING]- Not Found: /js/nav.js
+2018-11-05 09:23:58,821 [Thread-164:140031058224896] [django.request:170] [base:get_response] [WARNING]- Not Found: /js/nav.js
+2018-11-05 09:29:20,667 [Thread-188:140031100450560] [django.request:170] [base:get_response] [WARNING]- Not Found: /js/nav.js
+2018-11-05 09:29:20,726 [Thread-189:140031100450560] [django.request:170] [base:get_response] [WARNING]- Not Found: /js/nav.js
+2018-11-05 09:29:45,910 [Thread-213:140031066617600] [django.request:170] [base:get_response] [WARNING]- Not Found: /js/nav.js
+2018-11-05 09:29:45,947 [Thread-214:140031066617600] [django.request:170] [base:get_response] [WARNING]- Not Found: /js/nav.js
+2018-11-05 09:30:12,986 [Thread-238:140031075010304] [django.request:170] [base:get_response] [WARNING]- Not Found: /js/nav.js
+2018-11-05 09:30:13,032 [Thread-239:140031075010304] [django.request:170] [base:get_response] [WARNING]- Not Found: /js/nav.js
+2018-11-05 09:30:49,724 [Thread-262:140031075010304] [django.request:170] [base:get_response] [WARNING]- Not Found: /js/nav.js
+2018-11-05 09:30:49,779 [Thread-263:140031075010304] [django.request:170] [base:get_response] [WARNING]- Not Found: /js/nav.js
+2018-11-05 09:32:04,105 [Thread-287:140031058224896] [django.request:170] [base:get_response] [WARNING]- Not Found: /js/nav.js
+2018-11-05 09:32:04,159 [Thread-288:140031058224896] [django.request:170] [base:get_response] [WARNING]- Not Found: /js/nav.js
+2018-11-05 09:37:22,787 [Thread-311:140031058224896] [django.request:170] [base:get_response] [WARNING]- Not Found: /js/nav.js
+2018-11-05 09:37:22,974 [Thread-312:140031058224896] [django.request:170] [base:get_response] [WARNING]- Not Found: /js/nav.js
+2018-11-05 09:39:04,631 [Thread-356:140031049832192] [django.request:170] [base:get_response] [WARNING]- Not Found: /js/nav.js
+2018-11-05 09:39:04,686 [Thread-359:140031100450560] [django.request:170] [base:get_response] [WARNING]- Not Found: /js/nav.js
+2018-11-05 09:40:02,955 [Thread-3:140125303617280] [django.request:170] [base:get_response] [WARNING]- Not Found: /js/nav.js
+2018-11-05 09:40:05,077 [Thread-4:140125303617280] [django.request:170] [base:get_response] [WARNING]- Not Found: /js/nav.js
+2018-11-05 09:40:11,523 [Thread-7:140125303617280] [django.request:170] [base:get_response] [WARNING]- Not Found: /js/nav.js
+2018-11-05 09:40:17,958 [Thread-9:140125303617280] [django.request:170] [base:get_response] [WARNING]- Not Found: /js/nav.js
+2018-11-05 09:40:18,093 [Thread-10:140125292250880] [django.request:170] [base:get_response] [WARNING]- Not Found: /js/nav.js
+2018-11-05 09:40:40,331 [Thread-12:140125292250880] [django.request:170] [base:get_response] [WARNING]- Not Found: /js/nav.js
+2018-11-05 09:40:40,481 [Thread-13:140125292250880] [django.request:170] [base:get_response] [WARNING]- Not Found: /js/nav.js
+2018-11-05 11:04:01,553 [Thread-15:140125292250880] [django.request:170] [base:get_response] [WARNING]- Not Found: /js/nav.js
+2018-11-05 11:04:01,963 [Thread-16:140125292250880] [django.request:170] [base:get_response] [WARNING]- Not Found: /js/nav.js
+2018-11-05 11:04:07,223 [Thread-18:140125292250880] [django.request:170] [base:get_response] [WARNING]- Not Found: /js/nav.js
+2018-11-05 11:04:07,291 [Thread-19:140125292250880] [django.request:170] [base:get_response] [WARNING]- Not Found: /js/nav.js
+2018-11-05 11:04:09,126 [Thread-21:140125292250880] [django.request:170] [base:get_response] [WARNING]- Not Found: /js/nav.js
+2018-11-05 11:04:09,181 [Thread-22:140125292250880] [django.request:170] [base:get_response] [WARNING]- Not Found: /js/nav.js

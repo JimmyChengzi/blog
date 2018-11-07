@@ -1,8 +1,10 @@
 import logging
 from django.shortcuts import render
 from django.conf import settings
+from blog.models import *
+from django.core.paginator import Paginator,InvalidPage,EmptyPage,PageNotAnInteger
 
-logging = logging.getLogger('blog.views')
+logger = logging.getLogger('blog.views')
 
 #在setting下template中设置上下文处理
 def global_setting(request):
@@ -13,8 +15,20 @@ def global_setting(request):
 
 def index(request):
     try:
-        pass
+        # 分类信息获取(导航)
+        category_list = Category.objects.all()[:5]
     except Exception as e:
-        pass
-
-    return render(request,'index.html',locals())
+        logger.error(e)
+    #广告数据
+    ad_list = Ad.objects.all()
+    #最新文章数据
+    article_list = Article.objects.all()
+    #创建一个分页对象,默认10条数据
+    paginator = Paginator(article_list,2)
+    #检查分页,捕获分页异常
+    try:
+        page = int(request.GET.get('page',1))
+        article_list = paginator.page(page)
+    except (InvalidPage,EmptyPage,PageNotAnInteger): #三种分页异常
+        article_list = paginator.page(1)
+    return render(request, 'index.html', locals())
